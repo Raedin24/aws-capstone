@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS Capstone Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">AWS Capstone</span>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <ul class="nav-mobile" id="navMobile">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Azubi Africa &mdash; Cloud Engineering Capstone</p>
+      <h1>Deploying a Highly Available<br>Web Application on AWS</h1>
+      <p class="hero-sub">EC2 &bull; ALB &bull; CloudWatch &bull; GitHub Actions &bull; S3</p>
+      <a href="#overview" class="btn-primary">Explore the Project</a>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-ring"></div>
+      <span>AWS</span>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-label">Project Overview</div>
+      <h2>What We Built</h2>
+      <p class="section-desc">
+        A cloud-hosted web application deployed on AWS, running on an Amazon EC2 instance with
+        Ubuntu and Apache Web Server. An Application Load Balancer distributes traffic, CloudWatch
+        provides monitoring and alerting, and GitHub Actions automates deployments through a
+        CI/CD pipeline.
+      </p>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section id="objectives" class="section section-alt">
+    <div class="container">
+      <div class="section-label">Goals</div>
+      <h2>Project Objectives</h2>
+      <div class="cards">
+        <div class="card" data-delay="0">
+          <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>Deploy on AWS</h3>
+          <p>Host a production-ready web application on AWS infrastructure.</p>
+        </div>
+        <div class="card" data-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3>Secure Access</h3>
+          <p>Implement IAM roles and MFA for least-privilege access control.</p>
+        </div>
+        <div class="card" data-delay="200">
+          <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+          <h3>CI/CD Pipeline</h3>
+          <p>Automate deployments using GitHub Actions workflows.</p>
+        </div>
+        <div class="card" data-delay="300">
+          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Monitor Infrastructure</h3>
+          <p>Track system health and performance via Amazon CloudWatch.</p>
+        </div>
+        <div class="card" data-delay="400">
+          <div class="card-icon"><i class="fa-solid fa-coins"></i></div>
+          <h3>Cost Management</h3>
+          <p>Control spend with AWS Budgets and threshold notifications.</p>
+        </div>
+        <div class="card" data-delay="500">
+          <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Best Practices</h3>
+          <p>Demonstrate AWS Well-Architected Framework cloud principles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section id="architecture" class="section">
+    <div class="container">
+      <div class="section-label">System Design</div>
+      <h2>Architecture</h2>
+      <div class="arch-flow">
+        <div class="arch-node user">
+          <div class="arch-icon"><i class="fa-solid fa-user"></i></div>
+          <span>User</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-node">
+          <div class="arch-icon"><i class="fa-solid fa-bolt"></i></div>
+          <span>CloudFront</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-node">
+          <div class="arch-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <span>Load Balancer</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-node">
+          <div class="arch-icon"><i class="fa-solid fa-server"></i></div>
+          <span>EC2 Instance</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-node app">
+          <div class="arch-icon"><i class="fa-solid fa-globe"></i></div>
+          <span>Web App</span>
+        </div>
+      </div>
+      <div class="supporting-services">
+        <h3>Supporting Services</h3>
+        <div class="service-tags">
+          <span class="tag">IAM</span>
+          <span class="tag">AWS Budgets</span>
+          <span class="tag">CloudWatch</span>
+          <span class="tag">ACM Certificate</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">S3 Bucket</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-label">Infrastructure</div>
+      <h2>AWS Services Used</h2>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-header ec2">
+            <i class="fa-solid fa-server service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>Amazon EC2</h3>
+            <p>Hosts the web application using Ubuntu 22.04 and Apache Web Server.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header alb">
+            <i class="fa-solid fa-scale-balanced service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>Application Load Balancer</h3>
+            <p>Distributes incoming traffic across instances and performs health checks.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header s3">
+            <i class="fa-solid fa-bucket service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>Amazon S3</h3>
+            <p>Stores static assets, deployment artifacts, and project files.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header acm">
+            <i class="fa-solid fa-certificate service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>AWS Certificate Manager</h3>
+            <p>Provides SSL/TLS certificates for secure HTTPS communication.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header cw">
+            <i class="fa-solid fa-chart-line service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>Amazon CloudWatch</h3>
+            <p>Monitors system performance metrics and generates operational alerts.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header budgets">
+            <i class="fa-solid fa-coins service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>AWS Budgets</h3>
+            <p>Tracks project spending and sends notifications when thresholds are exceeded.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header iam">
+            <i class="fa-solid fa-shield-halved service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>IAM</h3>
+            <p>Provides secure access control with least-privilege permissions and MFA.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header gh">
+            <i class="fa-brands fa-github service-ico"></i>
+          </div>
+          <div class="service-body">
+            <h3>GitHub Actions</h3>
+            <p>Automates application deployment through a CI/CD pipeline on every push.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-label">The People</div>
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar">RO</div>
+          <h3>Rowyn Oheneafrewo Konadu</h3>
+          <span class="role">Project Lead</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">AB</div>
+          <h3>Annabel Buachie</h3>
+          <span class="role">Cloud Engineer</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">M</div>
+          <h3>Matey</h3>
+          <span class="role">DevOps Engineer</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">D</div>
+          <h3>Dennis</h3>
+          <span class="role">DevOps Engineer</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">GA</div>
+          <h3>Grace Adjekum</h3>
+          <span class="role">Documentation &amp; Testing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>AWS Capstone Project &mdash; Azubi Africa Cloud Engineering Program &mdash; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
