@@ -2,6 +2,10 @@
 
 A presentation site for the Azubi Africa Cloud Engineering capstone — documenting the deployment of a highly available web application on AWS.
 
+## Architecture
+
+![AWS Cloud Architecture Diagram](https://d9dnabjvkvhfn.cloudfront.net/images/aws_cloud_architecture_project_diagram.png)
+
 ## Stack
 
 - **Amazon EC2** — Ubuntu 22.04 + Apache web server
@@ -27,6 +31,6 @@ A presentation site for the Azubi Africa Cloud Engineering capstone — document
 |---|---|
 | Rowyn Oheneafrewo Konadu | Project Lead |
 | Annabel Buachie | Cloud Engineer |
-| Matey | DevOps Engineer |
-| Dennis | DevOps Engineer |
+| Matey Corletey | DevOps Engineer |
+| Dennis Antwi | DevOps Engineer |
 | Grace Adjekum | Documentation & Testing |
