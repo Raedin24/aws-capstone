@@ -401,17 +401,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 .avatar {
-  width: 64px;
-  height: 64px;
-  background: linear-gradient(135deg, var(--aws-orange), #e88000);
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--aws-dark);
+  object-fit: cover;
+  object-position: center top;
   margin: 0 auto 16px;
+  display: block;
+  border: 3px solid var(--aws-orange);
 }
 
 .team-card h3 {
