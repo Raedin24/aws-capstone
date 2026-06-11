@@ -8,7 +8,7 @@ A presentation site for the Azubi Africa Cloud Engineering capstone — document
 
 ## Stack
 
-- **Amazon EC2** — Ubuntu 22.04 + Apache web server
+- **Amazon EC2** — Amazon Linux + Apache web server
 - **Application Load Balancer** — traffic distribution and health checks
 - **Amazon S3** — static assets and deployment artifacts
 - **ACM** — SSL/TLS certificates
