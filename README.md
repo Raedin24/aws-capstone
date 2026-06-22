@@ -34,3 +34,4 @@ A presentation site for the Azubi Africa Cloud Engineering capstone — document
 | Matey Corletey | DevOps Engineer |
 | Dennis Antwi | DevOps Engineer |
 | Grace Adjekum | Documentation & Testing |
+| Grace Ivylyn | DevOps Engineer |
